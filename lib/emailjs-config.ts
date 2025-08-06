@@ -1,8 +1,8 @@
 // EmailJS Configuration
 export const EMAILJS_CONFIG = {
-  SERVICE_ID: 'service_zy9l23i',
-  TEMPLATE_ID: 'template_contact', // You'll need to create this template
-  PUBLIC_KEY: 'YOUR_PUBLIC_KEY', // You'll need to get this from EmailJS dashboard
+  SERVICE_ID: process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID,
+  TEMPLATE_ID: process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID,
+  PUBLIC_KEY: process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
 }
 
 // Email template variables that will be sent

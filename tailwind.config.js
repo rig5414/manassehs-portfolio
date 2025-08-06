@@ -120,6 +120,10 @@ module.exports = {
           "0%": { transform: "translateX(-100%)" },
           "100%": { transform: "translateX(100%)" },
         },
+        "spin": {
+          "from": { transform: "rotate(0deg)" },
+          "to": { transform: "rotate(360deg)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -129,6 +133,8 @@ module.exports = {
         "glow-pulse": "glow-pulse 2s ease-in-out infinite",
         "float": "float 3s ease-in-out infinite",
         "shimmer": "shimmer 2s ease-in-out infinite",
+        "spin-slow": "spin 8s linear infinite",
+        "spin-reverse": "spin 6s linear infinite reverse",
       },
       backgroundSize: {
         "300%": "300%",

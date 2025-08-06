@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect } from "react"
+import styles from './contact.module.css'
 import { motion } from "framer-motion"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -203,7 +204,7 @@ export default function Contact() {
                       {errors.message ? (
                         <p className="text-sm text-red-600 dark:text-red-400">{errors.message}</p>
                       ) : (
-                        <div />
+                        <div></div>
                       )}
                       <p className="text-xs text-muted-foreground">
                         {data.message.length}/2000 characters
@@ -256,20 +257,18 @@ export default function Contact() {
               {contactInfo.map((info, index) => (
                 <Card key={index} className="enhanced-card">
                   <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="bg-gradient-to-br from-blue-500/10 to-pink-500/10 p-3 rounded-full animate-float" style={{ animationDelay: `${index * 0.2}s` }}>
-                        {info.icon}
-                      </div>
-                      <div>
-                        <h4 className="text-lg font-semibold mb-1 gradient-text-subheading">{info.title}</h4>
-                        {info.link ? (
-                          <a href={info.link} className="text-muted-foreground hover:text-primary transition-colors">
-                            {info.value}
-                          </a>
-                        ) : (
-                          <p className="text-muted-foreground">{info.value}</p>
-                        )}
-                      </div>
+                    <div className={`bg-gradient-to-br from-blue-500/10 to-pink-500/10 p-3 rounded-full animate-float float-delay-${index}`}>
+                      {info.icon}
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold mb-1 gradient-text-subheading">{info.title}</h4>
+                      {info.link ? (
+                        <a href={info.link} className="text-muted-foreground hover:text-primary transition-colors">
+                          {info.value}
+                        </a>
+                      ) : (
+                        <p className="text-muted-foreground">{info.value}</p>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
@@ -280,17 +279,17 @@ export default function Contact() {
                   <h4 className="text-lg font-semibold mb-4 gradient-text-subheading">Connect With Me</h4>
                   <div className="flex gap-4">
                     <Button variant="outline" size="icon" className="social-icon-button" asChild>
-                      <a href="https://linkedin.com/in/manasseh-telle" target="_blank" rel="noopener noreferrer">
+                      <a href="https://linkedin.com/in/manasseh-telle" target="_blank" rel="noopener noreferrer" title="Visit my LinkedIn profile">
                         <Linkedin className="h-5 w-5" />
                       </a>
                     </Button>
                     <Button variant="outline" size="icon" className="social-icon-button" asChild>
-                      <a href="mailto:manassehtelle90@gmail.com">
+                      <a href="mailto:manassehtelle90@gmail.com" title="Send me an email">
                         <Mail className="h-5 w-5" />
                       </a>
                     </Button>
                     <Button variant="outline" size="icon" className="social-icon-button" asChild>
-                      <a href="tel:+254711580663">
+                      <a href="tel:+254711580663" title="Call my phone number">
                         <Phone className="h-5 w-5" />
                       </a>
                     </Button>

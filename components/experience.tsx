@@ -7,6 +7,19 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Calendar, MapPin, Building, ChevronDown, ChevronUp } from 'lucide-react'
 
+interface Experience {
+  id: number
+  title: string
+  company: string
+  location: string
+  period: string
+  type: string
+  shortDescription: string
+  description: string[]
+  technologies: string[]
+  achievements: string[]
+}
+
 export default function Experience() {
   const [expandedExperience, setExpandedExperience] = useState<number | null>(null)
   const [activeExperience, setActiveExperience] = useState(0)
@@ -16,7 +29,7 @@ export default function Experience() {
     visible: { opacity: 1, y: 0 },
   }
 
-  const experiences = [
+  const experiences: Experience[] = [
     {
       id: 1,
       title: "Freelancer Web Developer",
@@ -314,7 +327,15 @@ export default function Experience() {
 }
 
 // Experience Card Component
-function ExperienceCard({ experience, isActive, isExpanded, onToggleExpand, getTypeColor }) {
+interface ExperienceCardProps {
+  experience: Experience
+  isActive: boolean
+  isExpanded: boolean
+  onToggleExpand: () => void
+  getTypeColor: (type: string) => string
+}
+
+function ExperienceCard({ experience, isActive, isExpanded, onToggleExpand, getTypeColor }: ExperienceCardProps) {
   return (
     <Card className={`enhanced-card hover:shadow-lg transition-all duration-300 ${
       isActive ? 'shadow-xl shadow-primary/10 ring-2 ring-primary/20' : ''

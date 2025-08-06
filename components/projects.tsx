@@ -8,16 +8,29 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { ExternalLink, Github, ChevronDown } from 'lucide-react'
 
+interface Project {
+  id: number
+  title: string
+  shortDescription: string
+  description: string
+  image: string
+  tags: string[]
+  features: string[]
+  demoLink: string
+  githubLink: string
+  fullDescription: string
+}
+
 export default function Projects() {
-  const [selectedProject, setSelectedProject] = useState(null)
-  const [expandedProject, setExpandedProject] = useState(null)
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null)
+  const [expandedProject, setExpandedProject] = useState<number | null>(null)
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   }
 
-  const projects = [
+  const projects: Project[] = [
     {
       id: 1,
       title: "Quarry Management System",

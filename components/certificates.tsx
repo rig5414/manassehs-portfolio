@@ -8,8 +8,22 @@ import { Button } from "@/components/ui/button"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog"
 import { Award, Calendar, ExternalLink, Eye, Download } from 'lucide-react'
 
+interface Certificate {
+  id: number
+  title: string
+  issuer: string
+  date: string
+  category: string
+  description: string
+  image: string
+  credentialId: string
+  skills: string[]
+  verifyUrl: string
+  downloadUrl: string
+}
+
 export default function Certificates() {
-  const [selectedCertificate, setSelectedCertificate] = useState(null)
+  const [selectedCertificate, setSelectedCertificate] = useState<Certificate | null>(null)
   const [filter, setFilter] = useState("all")
 
   const fadeIn = {
@@ -17,7 +31,7 @@ export default function Certificates() {
     visible: { opacity: 1, y: 0 },
   }
 
-  const certificates = [
+  const certificates: Certificate[] = [
     {
       id: 1,
       title: "CompTIA Network+ Certification",
@@ -111,7 +125,7 @@ export default function Certificates() {
     : certificates.filter(cert => cert.category === filter)
 
   const getCategoryColor = (category: string) => {
-    const colors = {
+    const colors: Record<string, string> = {
       networking: "certificate-badge-blue",
       cloud: "certificate-badge-purple", 
       management: "certificate-badge-green",

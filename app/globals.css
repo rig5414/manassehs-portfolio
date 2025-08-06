@@ -2,6 +2,53 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+  }
+
+  @keyframes gradient-shift {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  .animate-float-delay-1 {
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 0.5s;
+  }
+
+  .animate-float-delay-2 {
+    animation: float 3s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  .animate-blink {
+    animation: blink 1s step-end infinite;
+  }
+}
+
 @layer base {
   :root {
     /* Light Theme - Softer, warmer colors */
@@ -280,6 +327,7 @@ header, #home {
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
@@ -421,19 +469,6 @@ header, #home {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.animate-blink {
-  animation: blink 1s step-end infinite;
-}
-
-@keyframes blink {
-  from, to {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-}
-
 /* Animated border rings */
 .animate-spin-slow {
   animation: spin 8s linear infinite;
@@ -490,7 +525,6 @@ header, #home {
   border: 3px solid hsl(var(--muted));
   border-top: 3px solid #3b82f6;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
   margin-top: 2rem;
   opacity: 0;
   animation: spin 1s linear infinite, fadeIn 0.5s ease-out 0.6s forwards;
@@ -782,39 +816,6 @@ textarea:focus-visible {
 }
 
 /* Enhanced Card Hover Effects for All Sections */
-.enhanced-card {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-  border-radius: 12px;
-}
-
-.enhanced-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(135deg, rgba(59, 130, 246, 0.05), rgba(236, 72, 153, 0.05));
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 0;
-}
-
-.enhanced-card:hover::before {
-  opacity: 1;
-}
-
-.enhanced-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.15);
-  border-color: rgba(59, 130, 246, 0.3);
-}
-
 .enhanced-card > * {
   position: relative;
   z-index: 1;

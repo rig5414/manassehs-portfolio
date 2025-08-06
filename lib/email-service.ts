@@ -83,7 +83,7 @@ export class EmailService {
       const result = await emailjs.send(
         config.emailjs.serviceId!,
         config.emailjs.templateId!,
-        templateParams
+        templateParams as unknown as Record<string, unknown>
       )
       
       console.log('✅ Email sent successfully:', result.text)

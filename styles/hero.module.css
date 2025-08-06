@@ -1,0 +1,112 @@
+.heroSection {
+  @apply relative pt-20 pb-20 md:pt-28 md:pb-32 min-h-screen flex items-center;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.heroBackgroundDark {
+  composes: heroSection;
+  background-image: url('/hero-bg-dark.png');
+}
+
+.heroBackgroundLight {
+  composes: heroSection;
+  background-image: url('/hero-bg-light.png');
+}
+
+.heroFixed {
+  background-attachment: fixed;
+}
+
+.heroScroll {
+  background-attachment: scroll;
+}
+
+.overlay {
+  @apply absolute inset-0 bg-background/60 backdrop-blur-[1px];
+}
+
+.nameFirst {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 300% 300%;
+  animation: float 3s ease-in-out infinite, gradient-shift 3s ease-in-out infinite;
+}
+
+.nameLast {
+  background: linear-gradient(135deg, #ec4899, #be185d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 300% 300%;
+  animation: float 3s ease-in-out infinite, gradient-shift 3s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    border-color: #3b82f6;
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(236, 72, 153, 0.5);
+    border-color: #ec4899;
+  }
+}
+
+@keyframes spin-reverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.ringContainer {
+  @apply absolute inset-0 rounded-full;
+}
+
+.outerRing {
+  @apply absolute inset-0 rounded-full border-4 border-blue-500/30;
+  animation: spin 8s linear infinite, glow-pulse 2s ease-in-out infinite;
+}
+
+.middleRing {
+  @apply absolute inset-2 rounded-full border-2 border-pink-500/40;
+  animation: spin-reverse 8s linear infinite, glow-pulse 2s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.innerRing {
+  @apply absolute inset-4 rounded-full border border-blue-500/20 animate-pulse;
+}
+
+.photoContainer {
+  @apply absolute inset-8 rounded-full overflow-hidden shadow-2xl ring-4 ring-blue-500/20 hover:ring-pink-500/30 transition-all duration-500 hover:scale-105;
+}
+
+.photo {
+  @apply w-full h-full object-cover object-center transition-transform duration-500 hover:scale-110;
+} 

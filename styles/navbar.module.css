@@ -1,0 +1,52 @@
+.header {
+  @apply fixed top-0 w-full z-50 transition-all duration-300 border-0;
+}
+
+.headerBackground {
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+}
+
+.headerBackgroundDark {
+  composes: headerBackground;
+  background-image: url('/hero-bg-dark.png');
+}
+
+.headerBackgroundLight {
+  composes: headerBackground;
+  background-image: url('/hero-bg-light.png');
+}
+
+.headerFixed {
+  background-attachment: fixed;
+}
+
+.headerScroll {
+  background-attachment: scroll;
+}
+
+.overlay {
+  @apply absolute inset-0 bg-background/20 backdrop-blur-[2px];
+}
+
+.mobileNav {
+  @apply md:hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mobileNavDark {
+  composes: mobileNav;
+  background-image: url('/hero-bg-dark.png');
+}
+
+.mobileNavLight {
+  composes: mobileNav;
+  background-image: url('/hero-bg-light.png');
+}
+
+.mobileOverlay {
+  @apply absolute inset-0 bg-background/80 backdrop-blur-md;
+}

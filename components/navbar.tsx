@@ -5,6 +5,7 @@ import { Menu, X, Moon, Sun, Download } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 import { useTheme } from "@/components/theme-provider"
+import styles from "@/styles/navbar.module.css"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -77,34 +78,39 @@ export default function Navbar() {
     { name: "Contact", href: "contact" },
   ]
 
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
+  }, [])
+
   return (
     <header 
-      className="fixed top-0 w-full z-50 transition-all duration-300 border-0"
-      style={{
-        backgroundImage: theme === 'dark' 
-          ? `url('/hero-bg-dark.png')` 
-          : `url('/hero-bg-light.png')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center top',
-        backgroundRepeat: 'no-repeat',
-        backgroundAttachment: window.innerWidth > 768 ? 'fixed' : 'scroll'
-      }}
+      className={cn(
+        styles.header,
+        theme === 'dark' ? styles.headerBackgroundDark : styles.headerBackgroundLight,
+        isMobile ? styles.headerScroll : styles.headerFixed
+      )}
     >
-      {/* Overlay for better text readability - reduced opacity for seamless blend */}
-      <div className="absolute inset-0 bg-background/20 backdrop-blur-[2px]"></div>
+      <div className={styles.overlay}></div>
       
-      <div className="container mx-auto px-4 py-4 relative z-10">
+      <div className="container relative z-10 px-4 py-4 mx-auto">
         <div className="flex items-center justify-between">
           <button 
             onClick={() => scrollToSection("home")} 
-            className="text-2xl font-bold hover:scale-105 transition-transform duration-300"
+            className="text-2xl font-bold transition-transform duration-300 hover:scale-105"
           >
             <span className="text-blue-500">Manasseh</span>
             <span className="text-pink-500">Telle</span>
           </button>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-6">
+          <nav className="items-center hidden space-x-6 md:flex">
             {navLinks.map((link) => (
               <button
                 key={link.name}
@@ -127,13 +133,13 @@ export default function Navbar() {
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
               className="rounded-full hover:bg-blue-500/10 backdrop-blur-sm"
             >
-              {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+              {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </Button>
             <Button 
               onClick={downloadResume} 
-              className="bg-gradient-to-r from-blue-500 to-pink-500 hover:from-blue-600 hover:to-pink-600 backdrop-blur-sm text-white"
+              className="text-white bg-gradient-to-r from-blue-500 to-pink-500 hover:from-blue-600 hover:to-pink-600 backdrop-blur-sm"
             >
-              <Download className="h-4 w-4 mr-2" />
+              <Download className="w-4 h-4 mr-2" />
               Resume
             </Button>
           </nav>
@@ -152,21 +158,11 @@ export default function Navbar() {
 
       {/* Mobile Navigation Menu - No border separation */}
       {isOpen && (
-        <div 
-          className="md:hidden"
-          style={{
-            backgroundImage: theme === 'dark' 
-              ? `url('/hero-bg-dark.png')` 
-              : `url('/hero-bg-light.png')`,
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat'
-          }}
-        >
+        <div className={theme === 'dark' ? styles.mobileNavDark : styles.mobileNavLight}>
           {/* Overlay for mobile menu */}
-          <div className="absolute inset-0 bg-background/80 backdrop-blur-md"></div>
+          <div className={styles.mobileOverlay}></div>
           
-          <div className="container mx-auto px-4 py-4 relative z-10">
+          <div className="container relative z-10 px-4 py-4 mx-auto">
             <nav className="flex flex-col space-y-4">
               {navLinks.map((link) => (
                 <button
@@ -186,10 +182,10 @@ export default function Navbar() {
                   onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                   className="rounded-full hover:bg-blue-500/10"
                 >
-                  {theme === "dark" ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+                  {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
                 </Button>
-                <Button onClick={downloadResume} className="flex-1 ml-4 bg-gradient-to-r from-blue-500 to-pink-500 text-white">
-                  <Download className="h-4 w-4 mr-2" />
+                <Button onClick={downloadResume} className="flex-1 ml-4 text-white bg-gradient-to-r from-blue-500 to-pink-500">
+                  <Download className="w-4 h-4 mr-2" />
                   Resume
                 </Button>
               </div>

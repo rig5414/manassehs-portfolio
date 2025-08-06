@@ -24,7 +24,7 @@ export default function Testimonials() {
       content:
         "Working with Manasseh was an absolute pleasure. He delivered our project on time and exceeded our expectations in terms of quality and functionality. His attention to detail and problem-solving skills are exceptional.",
       rating: 5,
-      image: "/placeholder.svg?height=100&width=100",
+      image: "/sarah.jpg?height=100&width=100",
       company: "TechCorp",
     },
     {
@@ -34,7 +34,7 @@ export default function Testimonials() {
       content:
         "Manasseh helped us rebuild our entire platform from the ground up. His technical expertise and ability to understand our business needs resulted in a product that has significantly improved our user engagement.",
       rating: 5,
-      image: "/placeholder.svg?height=100&width=100",
+      image: "/michael.jpg?height=100&width=100",
       company: "StartupX",
     },
     {
@@ -44,7 +44,7 @@ export default function Testimonials() {
       content:
         "I was impressed by Manasseh's ability to translate our design vision into a fully functional website. He was responsive, professional, and provided valuable suggestions that improved the overall user experience.",
       rating: 5,
-      image: "/placeholder.svg?height=100&width=100",
+      image: "/emily.webp?height=100&width=100",
       company: "DesignHub",
     },
     {
@@ -54,7 +54,7 @@ export default function Testimonials() {
       content:
         "Manasseh's expertise in both infrastructure support and development made him invaluable to our team. He solved complex network issues while also building custom tools that streamlined our operations.",
       rating: 5,
-      image: "/placeholder.svg?height=100&width=100",
+      image: "/davidkim.webp?height=100&width=100",
       company: "GrowthCo",
     },
     {
@@ -64,7 +64,7 @@ export default function Testimonials() {
       content:
         "The system optimization work done by Manasseh has been a game-changer for our business. Our network uptime improved to 99% and the custom dashboard he built helps us monitor everything in real-time.",
       rating: 5,
-      image: "/placeholder.svg?height=100&width=100",
+      image: "/lisa.jpg?height=100&width=100",
       company: "RetailPlus",
     },
     {
@@ -74,7 +74,7 @@ export default function Testimonials() {
       content:
         "Manasseh's full-stack development skills are outstanding. He built our e-commerce platform from scratch and it has been running flawlessly. His project management abilities ensured everything was delivered on schedule.",
       rating: 5,
-      image: "/placeholder.svg?height=100&width=100",
+      image: "/jameswilson.jpg?height=100&width=100",
       company: "InnovateTech",
     }
   ]
@@ -125,20 +125,20 @@ export default function Testimonials() {
 
   return (
     <section id="testimonials" className="py-20 bg-gradient-to-br from-muted/30 to-primary/5">
-      <div className="container mx-auto px-4">
+      <div className="container px-4 mx-auto">
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
           variants={fadeIn}
-          className="text-center mb-16"
+          className="mb-16 text-center"
         >
           <Badge variant="outline" className="mb-4 enhanced-badge">
             💬 Testimonials
           </Badge>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text-heading">Client Satisfaction</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-blue-500 to-pink-500 mx-auto rounded-full"></div>
+          <h2 className="mb-4 text-3xl font-bold md:text-4xl gradient-text-heading">Client Satisfaction</h2>
+          <div className="w-20 h-1 mx-auto rounded-full bg-gradient-to-r from-blue-500 to-pink-500"></div>
         </motion.div>
 
         <div className="max-w-6xl mx-auto">
@@ -152,7 +152,7 @@ export default function Testimonials() {
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: -100 }}
                   transition={{ duration: 0.5, ease: "easeInOut" }}
-                  className="grid md:grid-cols-2 gap-6"
+                  className="grid gap-6 md:grid-cols-2"
                 >
                   {getCurrentTestimonials().map((testimonial, index) => (
                     <TestimonialCard 
@@ -186,31 +186,31 @@ export default function Testimonials() {
             </div>
 
             {/* Navigation Buttons */}
-            <div className="absolute top-1/2 -translate-y-1/2 -left-4 md:-left-12">
+            <div className="absolute -translate-y-1/2 top-1/2 -left-4 md:-left-12">
               <Button
                 variant="outline"
                 size="icon"
                 onClick={prevTestimonials}
                 className="enhanced-nav-button"
               >
-                <ChevronLeft className="h-4 w-4" />
+                <ChevronLeft className="w-4 h-4" />
               </Button>
             </div>
             
-            <div className="absolute top-1/2 -translate-y-1/2 -right-4 md:-right-12">
+            <div className="absolute -translate-y-1/2 top-1/2 -right-4 md:-right-12">
               <Button
                 variant="outline"
                 size="icon"
                 onClick={nextTestimonials}
                 className="enhanced-nav-button"
               >
-                <ChevronRight className="h-4 w-4" />
+                <ChevronRight className="w-4 h-4" />
               </Button>
             </div>
           </div>
 
           {/* Dots Indicator */}
-          <div className="flex justify-center mt-8 gap-2">
+          <div className="flex justify-center gap-2 mt-8" role="tablist" aria-label="Testimonial navigation">
             {Array.from({ length: Math.ceil(testimonials.length / 2) }, (_, index) => (
               <button
                 key={index}
@@ -220,15 +220,18 @@ export default function Testimonials() {
                     ? 'bg-primary scale-125'
                     : 'bg-muted-foreground/30 hover:bg-muted-foreground/50'
                 }`}
+                aria-label={`Go to testimonials ${index * 2 + 1}-${Math.min((index * 2) + 2, testimonials.length)}`}
+                role="tab"
+                title={`View testimonials ${index * 2 + 1}-${Math.min((index * 2) + 2, testimonials.length)}`}
               />
             ))}
           </div>
 
           {/* Auto-play indicator */}
-          <div className="text-center mt-4">
+          <div className="mt-4 text-center">
             <button
               onClick={() => setIsAutoPlaying(!isAutoPlaying)}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm transition-colors text-muted-foreground hover:text-foreground"
             >
               {isAutoPlaying ? 'Pause' : 'Play'} Auto-scroll
             </button>
@@ -240,17 +243,30 @@ export default function Testimonials() {
 }
 
 // Testimonial Card Component
-function TestimonialCard({ testimonial, renderStars, delay }) {
+interface TestimonialCardProps {
+  readonly testimonial: {
+    readonly name: string
+    readonly position: string
+    readonly company: string
+    readonly content: string
+    readonly rating: number
+    readonly image: string
+  }
+  readonly renderStars: (rating: number) => React.ReactNode
+  readonly delay: number
+}
+
+function TestimonialCard({ testimonial, renderStars, delay }: TestimonialCardProps) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay }}
     >
-      <Card className="h-full enhanced-card hover:shadow-xl transition-shadow duration-300 relative overflow-hidden">
+      <Card className="relative h-full overflow-hidden transition-shadow duration-300 enhanced-card hover:shadow-xl">
         <CardContent className="p-6 sm:p-8">
           <div className="absolute top-4 right-4 text-primary/20">
-            <Quote className="h-12 w-12 sm:h-16 sm:w-16" />
+            <Quote className="w-12 h-12 sm:h-16 sm:w-16" />
           </div>
           
           <div className="flex flex-col h-full">
@@ -258,27 +274,27 @@ function TestimonialCard({ testimonial, renderStars, delay }) {
               {renderStars(testimonial.rating)}
             </div>
             
-            <blockquote className="text-base sm:text-lg text-muted-foreground mb-6 italic leading-relaxed flex-grow">
+            <blockquote className="flex-grow mb-6 text-base italic leading-relaxed sm:text-lg text-muted-foreground">
               "{testimonial.content}"
             </blockquote>
             
             <div className="flex items-center gap-4 mt-auto">
-              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full overflow-hidden ring-2 ring-primary/20 flex-shrink-0">
+              <div className="flex-shrink-0 w-12 h-12 overflow-hidden rounded-full sm:w-16 sm:h-16 ring-2 ring-primary/20">
                 <img
                   src={testimonial.image || "/placeholder.svg"}
                   alt={testimonial.name}
-                  className="w-full h-full object-cover"
+                  className="object-cover w-full h-full"
                 />
               </div>
               
-              <div className="min-w-0 flex-1">
-                <h4 className="text-lg sm:text-xl font-bold text-foreground truncate">
+              <div className="flex-1 min-w-0">
+                <h4 className="text-lg font-bold truncate sm:text-xl text-foreground">
                   {testimonial.name}
                 </h4>
-                <p className="text-primary font-medium text-sm sm:text-base truncate">
+                <p className="text-sm font-medium truncate text-primary sm:text-base">
                   {testimonial.position}
                 </p>
-                <p className="text-xs sm:text-sm text-muted-foreground truncate">
+                <p className="text-xs truncate sm:text-sm text-muted-foreground">
                   {testimonial.company}
                 </p>
               </div>
