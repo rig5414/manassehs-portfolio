@@ -70,12 +70,12 @@ export default function Testimonials() {
     {
       id: 6,
       name: "James Wilson",
-      position: "CEO at InnovateTech",
+      position: "CEO at NextDoor Solutions",
       content:
         "Manasseh's full-stack development skills are outstanding. He built our e-commerce platform from scratch and it has been running flawlessly. His project management abilities ensured everything was delivered on schedule.",
       rating: 5,
       image: "/jameswilson.jpg?height=100&width=100",
-      company: "InnovateTech",
+      company: "NextDoor Solutions",
     }
   ]
 
