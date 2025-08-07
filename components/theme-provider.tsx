@@ -51,7 +51,7 @@ export function ThemeProvider({ children, defaultTheme = "light" }: ThemeProvide
 
   // Prevent hydration mismatch
   if (!mounted) {
-    return <div style={{ visibility: 'hidden' }}>{children}</div>
+    return <div className="theme-provider-hidden">{children}</div>
   }
 
   return <ThemeProviderContext.Provider value={value}>{children}</ThemeProviderContext.Provider>

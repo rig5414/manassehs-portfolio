@@ -36,16 +36,22 @@ export function useContactForm() {
 
   const validateForm = useCallback((data: FormData): Partial<FormData> => {
     const errors: Partial<FormData> = {}
+    
+    // Trim values only for validation
+    const trimmedName = data.name.trim()
+    const trimmedEmail = data.email.trim()
+    const trimmedSubject = data.subject.trim()
+    const trimmedMessage = data.message.trim()
 
-    if (!data.name.trim()) {
+    if (!trimmedName) {
       errors.name = 'Name is required'
-    } else if (data.name.length < 2) {
+    } else if (trimmedName.length < 2) {
       errors.name = 'Name must be at least 2 characters'
     }
 
-    if (!data.email.trim()) {
+    if (!trimmedEmail) {
       errors.email = 'Email is required'
-    } else if (!SecurityUtils.isValidEmail(data.email)) {
+    } else if (!SecurityUtils.isValidEmail(trimmedEmail)) {
       errors.email = 'Please enter a valid email address'
     }
 

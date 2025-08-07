@@ -60,7 +60,7 @@ export default function Navbar() {
 
   const downloadResume = () => {
     const link = document.createElement('a')
-    link.href = '/manasseh-telle-resume.pdf'
+    link.href = '/public/Manassehs_resume.pdf'
     link.download = 'Manasseh_Telle_Resume.pdf'
     document.body.appendChild(link)
     link.click()

@@ -28,7 +28,6 @@ export class SecurityUtils {
   // Input sanitization
   public static sanitizeInput(input: string): string {
     return input
-      .trim()
       .replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '') // Remove script tags
       .replace(/javascript:/gi, '') // Remove javascript: protocols
       .replace(/on\w+\s*=/gi, '') // Remove event handlers
