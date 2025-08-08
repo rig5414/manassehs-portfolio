@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Github, Linkedin, Mail, Phone } from 'lucide-react'
+import { ArrowRight, Mail, Phone } from 'lucide-react'
 import { motion } from "framer-motion"
 import { useTheme } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
@@ -57,7 +57,8 @@ export default function Hero() {
         if (text.length > 0) {
           setText(text.substring(0, text.length - 1))
           timeoutId = setTimeout(typeEffect, 50)
-        } else {
+        }
+        if (text.length === 0) {
           setIsDeleting(false)
           setRoleIndex((prev) => (prev + 1) % roles.length)
         }
@@ -146,7 +147,8 @@ export default function Hero() {
                   rel="noopener noreferrer"
                   title="Visit my LinkedIn profile"
                 >
-                  <Linkedin className="w-5 h-5" />
+                  {/* Use a generic link icon or custom SVG since Linkedin is deprecated */}
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.97 0-1.75-.79-1.75-1.76s.78-1.76 1.75-1.76 1.75.79 1.75 1.76-.78 1.76-1.75 1.76zm15.5 11.27h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-10h2.89v1.36h.04c.4-.75 1.37-1.54 2.82-1.54 3.01 0 3.57 1.98 3.57 4.56v5.62z"/></svg>
                   <span className="sr-only">LinkedIn Profile</span>
                 </a>
               </Button>

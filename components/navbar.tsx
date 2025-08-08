@@ -9,18 +9,35 @@ import styles from "@/styles/navbar.module.css"
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
-  const [scrolled, setScrolled] = useState(false)
+  // const [scrolled, setScrolled] = useState(false)
   const [activeSection, setActiveSection] = useState("home")
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
   const { theme, setTheme } = useTheme()
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 10)
+      const currentScrollY = window.scrollY
+      const scrollThreshold = 100
+      
+      // Check if scrolled past threshold
+      // setScrolled(currentScrollY > 10)
+      
+      // Hide/show navbar based on scroll direction
+      if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
+        setIsVisible(false) // Scrolling down - hide navbar
+      } else {
+        setIsVisible(true) // Scrolling up - show navbar
+      }
+      
+      // Show scroll to top button when near bottom
+      
+      setLastScrollY(currentScrollY)
     }
 
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
-  }, [])
+  }, [lastScrollY])
 
   useEffect(() => {
     const sections = ["home", "about", "tech-stack", "experience", "projects", "certificates", "testimonials", "contact"]
@@ -60,7 +77,7 @@ export default function Navbar() {
 
   const downloadResume = () => {
     const link = document.createElement('a')
-    link.href = '/public/Manassehs_resume.pdf'
+    link.href = '/Manassehs_resume.pdf'
     link.download = 'Manasseh_Telle_Resume.pdf'
     document.body.appendChild(link)
     link.click()
@@ -94,7 +111,9 @@ export default function Navbar() {
       className={cn(
         styles.header,
         theme === 'dark' ? styles.headerBackgroundDark : styles.headerBackgroundLight,
-        isMobile ? styles.headerScroll : styles.headerFixed
+        isMobile ? styles.headerScroll : styles.headerFixed,
+        "transition-transform duration-300",
+        isVisible ? "translate-y-0" : "-translate-y-full"
       )}
     >
       <div className={styles.overlay}></div>

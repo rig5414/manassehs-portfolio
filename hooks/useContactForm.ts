@@ -83,7 +83,7 @@ export function useContactForm() {
           ...prev,
           isSubmitting: false,
           status: 'error',
-          message: 'Please fix the errors below',
+          message: 'Please fix the errors above',
           errors,
         }))
         return

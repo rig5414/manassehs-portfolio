@@ -866,3 +866,49 @@ textarea:focus-visible {
   color: #3b82f6;
   text-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
 }
+
+/* Autofill background fix for inputs and textareas */
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #f3f4f6 inset !important; /* soft gray for light mode */
+  box-shadow: 0 0 0 1000px #f3f4f6 inset !important;
+  -webkit-text-fill-color: #222 !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.dark input:-webkit-autofill,
+.dark textarea:-webkit-autofill,
+.dark select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #181a20 inset !important; /* even darker for dark mode */
+  box-shadow: 0 0 0 1000px #181a20 inset !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #f3f4f6 inset !important;
+  box-shadow: 0 0 0 1000px #f3f4f6 inset !important;
+  -webkit-text-fill-color: #222 !important;
+}
+
+.dark input:-webkit-autofill:focus,
+.dark textarea:-webkit-autofill:focus,
+.dark select:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px #181a20 inset !important;
+  box-shadow: 0 0 0 1000px #181a20 inset !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+html, body, #__next, #root {
+  transition:
+    background-color 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    color 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Utility to disable all transitions for instant theme switching */
+.disable-theme-transition, .disable-theme-transition * {
+  transition: none !important;
+}

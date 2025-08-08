@@ -46,7 +46,18 @@ export function ThemeProvider({ children, defaultTheme = "light" }: ThemeProvide
 
   const value = {
     theme,
-    setTheme: (theme: Theme) => setTheme(theme),
+    setTheme: (newTheme: Theme) => {
+      const root = window.document.documentElement;
+      root.classList.add('disable-theme-transition');
+      // Instantly update theme class and localStorage
+      root.classList.remove('light', 'dark');
+      root.classList.add(newTheme);
+      localStorage.setItem('theme', newTheme);
+      setTheme(newTheme);
+      requestAnimationFrame(() => {
+        root.classList.remove('disable-theme-transition');
+      });
+    },
   }
 
   // Prevent hydration mismatch
