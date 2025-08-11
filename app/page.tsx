@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://manassehtelle.dev",
+    url: "https://tellefolio.vercel.app",
     siteName: "Manasseh Telle Portfolio",
     title: "Manasseh Telle | ICT Infrastructure Support & Full-Stack Developer",
     description: "Professional portfolio showcasing ICT infrastructure support expertise and full-stack development skills. Specializing in system administration, network troubleshooting, and modern web development.",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     creator: "@manassehtelle",
   },
   alternates: {
-    canonical: "https://manassehtelle.dev",
+    canonical: "https://tellefolio.vercel.app",
   },
   category: "technology",
 }
@@ -80,7 +80,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   name: "Manasseh Telle",
-  url: "https://manassehtelle.dev",
+  url: "https://tellefolio.vercel.app",
   image: "/manasseh-telle-headshot.png",
   sameAs: [
     "https://linkedin.com/in/manasseh-telle",

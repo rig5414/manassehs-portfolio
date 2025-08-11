@@ -3,24 +3,45 @@
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 
+const loadingMessages = [
+  { message: "Initializing awesome experience... 🚀", emoji: "✨" },
+  { message: "Loading creative projects... 💼", emoji: "🎨" },
+  { message: "Preparing tech stack... 🔧", emoji: "💻" },
+  { message: "Almost there... ⚡", emoji: "🌟" }
+]
+
 export default function LoadingScreen() {
   const [isLoading, setIsLoading] = useState(true)
   const [progress, setProgress] = useState(0)
+  const [messageIndex, setMessageIndex] = useState(0)
 
   useEffect(() => {
-    // Simulate loading progress
+    // Handle actual resource loading
+    const handleLoad = () => {
+      setProgress(100)
+      setTimeout(() => setIsLoading(false), 500)
+    }
+
+    if (document.readyState === 'complete') {
+      handleLoad()
+    } else {
+      window.addEventListener('load', handleLoad)
+    }
+
+    // Simulate progress until everything is loaded
     const interval = setInterval(() => {
       setProgress(prev => {
-        if (prev >= 100) {
-          clearInterval(interval)
-          setTimeout(() => setIsLoading(false), 500)
-          return 100
-        }
-        return prev + Math.random() * 15
+        const increment = Math.min(99 - prev, Math.random() * 15)
+        return prev + increment
       })
-    }, 200)
 
-    return () => clearInterval(interval)
+      setMessageIndex(prev => (prev + 1) % loadingMessages.length)
+    }, 1500)
+
+    return () => {
+      clearInterval(interval)
+      window.removeEventListener('load', handleLoad)
+    }
   }, [])
 
   return (
@@ -45,15 +66,28 @@ export default function LoadingScreen() {
             <p className="loading-subtitle">ICT Infrastructure Support & Full-Stack Developer</p>
             
             <div className="mt-8">
-              <div className="w-64 h-2 bg-muted rounded-full overflow-hidden">
+              <div className="w-80 h-3 bg-muted rounded-full overflow-hidden">
                 <motion.div
-                  className="h-full bg-gradient-to-r from-blue-500 to-pink-500"
+                  className="h-full bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500"
                   initial={{ width: 0 }}
                   animate={{ width: `${progress}%` }}
                   transition={{ duration: 0.3 }}
                 />
               </div>
-              <p className="text-sm text-muted-foreground mt-2">{Math.round(progress)}%</p>
+              <motion.p
+                key={messageIndex}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                exit={{ opacity: 0, y: -20 }}
+                transition={{ duration: 0.5 }}
+                className="text-sm text-muted-foreground mt-4 flex items-center justify-center gap-2"
+              >
+                {loadingMessages[messageIndex].message}
+                <span className="text-xl animate-bounce">
+                  {loadingMessages[messageIndex].emoji}
+                </span>
+              </motion.p>
+              <p className="text-sm font-semibold mt-2">{Math.round(progress)}%</p>
             </div>
           </motion.div>
           

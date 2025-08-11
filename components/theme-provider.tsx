@@ -27,7 +27,21 @@ export function ThemeProvider({ children, defaultTheme = "light" }: ThemeProvide
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    // Check system preference
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    const systemTheme = mediaQuery.matches ? 'dark' : 'light'
+    setTheme(localStorage.getItem('theme') as Theme || systemTheme)
+
+    // Listen for system theme changes
+    const listener = (e: MediaQueryListEvent) => {
+      if (!localStorage.getItem('theme')) {
+        setTheme(e.matches ? 'dark' : 'light')
+      }
+    }
+    mediaQuery.addEventListener('change', listener)
     setMounted(true)
+
+    return () => mediaQuery.removeEventListener('change', listener)
     // Check for saved theme in localStorage
     const savedTheme = localStorage.getItem("theme") as Theme
     if (savedTheme) {

@@ -37,7 +37,7 @@ export default function Projects() {
       shortDescription: "Custom quarry management website with interactive features.",
       description: "A comprehensive quarry management system built for efficient operations management.",
       image: "/placeholder-sw6cj.png",
-      tags: ["React.js", "Tailwind CSS", "JavaScript", "Responsive Design"],
+      tags: ["Next.js", "Tailwind CSS", "JavaScript", "Responsive Design"],
       features: [
         "Interactive dashboard for operations management",
         "Real-time data tracking and reporting",
@@ -45,8 +45,8 @@ export default function Projects() {
         "Client-focused feature implementation",
         "Efficient project delivery within timeline"
       ],
-      demoLink: "#",
-      githubLink: "#",
+      demoLink: "https://v0-natural-stone-website.vercel.app/",
+      githubLink: "https://github.com/rig5414/quarry-site",
       fullDescription: "Developed as a freelance project, this quarry management system provides comprehensive tools for managing quarry operations. Built with React.js and styled with Tailwind CSS, the system features an intuitive interface for tracking operations, managing resources, and generating reports. The project was delivered on time and met all client specifications through effective communication and iterative development.",
     },
     {
@@ -63,8 +63,8 @@ export default function Projects() {
         "RESTful API development",
         "Database connectivity and management"
       ],
-      demoLink: "#",
-      githubLink: "#",
+      demoLink: "https://mtshopnextdoor.netlify.app/",
+      githubLink: "https://github.com/rig5414/shop-next-door",
       fullDescription: "Led the development of a localized e-commerce platform as part of a university project. The platform features a complete product management system, user authentication, shopping cart functionality, and order processing. Built with React.js for the frontend and Node.js for the backend, with comprehensive API integration and database management.",
     },
     {

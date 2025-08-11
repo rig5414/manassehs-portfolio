@@ -150,7 +150,7 @@ export default function Navbar() {
               variant="ghost"
               size="icon"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-              className="rounded-full hover:bg-blue-500/10 backdrop-blur-sm"
+              className="rounded-full hover:bg-blue-500/40 backdrop-blur-sm"
             >
               {theme === "dark" ? <Sun className="w-5 h-5" /> : <Moon className="w-5 h-5" />}
             </Button>

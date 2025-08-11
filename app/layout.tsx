@@ -7,11 +7,13 @@ import { ThemeProvider } from "@/components/theme-provider"
 const inter = Inter({ 
   subsets: ["latin"],
   display: 'swap',
-  variable: '--font-inter'
+  variable: '--font-inter',
+  preload: true
 })
 
+// Removed duplicate viewport declaration
 export const metadata: Metadata = {
-  metadataBase: new URL('https://manassehtelle.dev'),
+  metadataBase: new URL('https://tellefolio.vercel.app'),
   title: {
     default: "Manasseh Telle | ICT Infrastructure Support & Full-Stack Developer",
     template: "%s | Manasseh Telle"
@@ -95,9 +97,16 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
         <meta name="format-detection" content="telephone=no, date=no, email=no, address=no" />
+        <meta name="mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, viewport-fit=cover" />
       </head>
-      <body className={`${inter.className} antialiased`}>
-        <ThemeProvider defaultTheme="light">{children}</ThemeProvider>
+      <body className={`${inter.className} antialiased min-h-screen overflow-x-hidden text-foreground bg-background`}>
+        <ThemeProvider defaultTheme="light">
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   )
