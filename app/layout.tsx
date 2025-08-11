@@ -49,8 +49,8 @@ export const metadata: Metadata = {
     telephone: false,
   },
   verification: {
-    google: "your-google-verification-code",
-    yandex: "your-yandex-verification-code",
+    google: "sfp3n5mE9V9IH_aX5ZaZvHRoErmoaRZpN67F56rU-_0",
+    yandex: "your-yandex-verification-code"
   },
   robots: {
     index: true,
