@@ -1,23 +1,11 @@
 User-agent: *
 Allow: /
-Allow: /#about
-Allow: /#projects
-Allow: /#experience
-Allow: /#certificates
-Allow: /#testimonials
-Allow: /#contact
 
-# Important: Allow Google to crawl JavaScript and CSS files
-Allow: *.js
-Allow: *.css
-Allow: *.jpg
-Allow: *.jpeg
-Allow: *.png
-Allow: *.gif
-Allow: *.webp
-Allow: *.svg
+# Important: Allow Google to crawl all resources
+Allow: /
+Allow: /*
 
-# Sitemap
+# Sitemap location
 Sitemap: https://tellefolio.vercel.app/sitemap.xml
 
 # Crawl-delay (reduced to help with indexing)
