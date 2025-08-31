@@ -32,6 +32,29 @@ export default function Experience() {
   const experiences: Experience[] = [
     {
       id: 1,
+      title: "ICT Support Intern",
+      company: "Bulkstream Logistics Limited",
+      location: "Mombasa",
+      period: "Sep 2025 - Present",
+      type: "Internship",
+      shortDescription: "Providing comprehensive ICT support for logistics operations and infrastructure",
+      description: [
+        "Currently providing comprehensive ICT support for logistics operations and infrastructure",
+        "Supporting network administration and system maintenance for logistics management systems",
+        "Contributing to IT infrastructure optimization and service delivery improvements",
+        "Managing user support and technical issue resolution for operational efficiency",
+        "Implementing and maintaining IT security protocols and best practices",
+        "Assisting in documentation and reporting of IT processes and incidents"
+      ],
+      technologies: ["Network Administration", "System Support", "IT Infrastructure", "Technical Support", "IT Security"],
+      achievements: [
+        "Supporting smooth IT operations for logistics management",
+        "Contributing to system maintenance and optimization",
+        "Improving service delivery processes"
+      ]
+    },
+    {
+      id: 2,
       title: "Freelancer Web Developer",
       company: "Self-Employed",
       location: "Juja, Kiambu",
@@ -52,7 +75,7 @@ export default function Experience() {
       ]
     },
     {
-      id: 2,
+      id: 3,
       title: "Full Stack Engineer & Project Manager",
       company: "Machakos University",
       location: "Machakos",
@@ -74,7 +97,7 @@ export default function Experience() {
       ]
     },
     {
-      id: 3,
+      id: 4,
       title: "ICT and Network Support Intern",
       company: "Bulkstream Limited",
       location: "Mombasa",
@@ -97,7 +120,7 @@ export default function Experience() {
       ]
     },
     {
-      id: 4,
+      id: 5,
       title: "Web Developer & Project Manager",
       company: "Machakos University",
       location: "Machakos",
