@@ -6,7 +6,7 @@
 1. Copy `.env.example` to `.env.local`
 2. Fill in your EmailJS credentials:
    \`\`\`bash
-   NEXT_PUBLIC_EMAILJS_SERVICE_ID=service_zy9l23i
+   NEXT_PUBLIC_EMAILJS_SERVICE_ID=service_id
    NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=template_contact_form
    NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_actual_public_key_here
    \`\`\`
