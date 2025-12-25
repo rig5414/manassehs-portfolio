@@ -206,6 +206,7 @@ export default function Certificates() {
                       <img
                         src={certificate.image || "/placeholder.svg?height=200&width=300"}
                         alt={certificate.title}
+                        loading="lazy"
                         className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
@@ -229,7 +230,7 @@ export default function Certificates() {
                             className="enhanced-action-button"
                             onClick={(e) => {
                               e.stopPropagation()
-                              window.open(certificate.verifyUrl, "_blank")
+                              window.open(certificate.verifyUrl, "_blank", "noopener,noreferrer")
                             }}
                           >
                             <ExternalLink className="h-4 w-4 mr-1" />
@@ -319,6 +320,7 @@ export default function Certificates() {
               <img
                 src={selectedCertificate.image || "/placeholder.svg"}
                 alt={selectedCertificate.title}
+                loading="lazy"
                 className="w-full rounded-lg object-cover max-h-64"
               />
               

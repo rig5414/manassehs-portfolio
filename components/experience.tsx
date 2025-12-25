@@ -23,6 +23,7 @@ interface Experience {
 export default function Experience() {
   const [expandedExperience, setExpandedExperience] = useState<number | null>(null)
   const [activeExperience, setActiveExperience] = useState(0)
+  const [showAllExperiences, setShowAllExperiences] = useState(false)
 
   const fadeIn = {
     hidden: { opacity: 0, y: 20 },
@@ -32,6 +33,29 @@ export default function Experience() {
   const experiences: Experience[] = [
     {
       id: 1,
+      title: "Freelancer Web Developer",
+      company: "BuildLink",
+      location: "Nairobi (Remote)",
+      period: "Dec 2025 - Present",
+      type: "Freelance",
+      shortDescription: "Contributing to Kenya's first dedicated platform for built environment professionals",
+      description: [
+        "Actively contributing to BuildLink, a digital ecosystem connecting architects, engineers, planners, and construction professionals across Kenya",
+        "Developing and maintaining features for professional profile management and project showcase functionality",
+        "Collaborating with cross-functional team to enhance platform UI/UX for built environment professionals",
+        "Implementing responsive components using React.js for seamless multi-device experience",
+        "Managing real-time data synchronization with Supabase backend for professional networking features",
+        "Contributing to codebase optimization and performance improvements for the growing community platform"
+      ],
+      technologies: ["React.js", "Supabase", "JavaScript", "Full-Stack Development", "Real-time Database"],
+      achievements: [
+        "Contributing to Kenya's first dedicated built environment platform",
+        "Implementing professional networking features",
+        "Enhancing platform accessibility for 1000+ users"
+      ]
+    },
+    {
+      id: 2,
       title: "ICT Support Intern",
       company: "Bulkstream Logistics Limited",
       location: "Mombasa",
@@ -39,22 +63,25 @@ export default function Experience() {
       type: "Internship",
       shortDescription: "Providing comprehensive ICT support for logistics operations and infrastructure",
       description: [
-        "Currently providing comprehensive ICT support for logistics operations and infrastructure",
-        "Supporting network administration and system maintenance for logistics management systems",
-        "Contributing to IT infrastructure optimization and service delivery improvements",
-        "Managing user support and technical issue resolution for operational efficiency",
-        "Implementing and maintaining IT security protocols and best practices",
-        "Assisting in documentation and reporting of IT processes and incidents"
+        "Providing comprehensive technical support to logistics operations team, managing 50+ devices and systems",
+        "Supporting network administration tasks including network monitoring, configuration, and troubleshooting for seamless operations",
+        "Performing regular system maintenance including Windows and Linux system updates, patches, and security configurations",
+        "Resolving hardware and software issues to minimize operational downtime and maintain productivity",
+        "Contributing to IT infrastructure optimization initiatives and implementing best practices for service delivery",
+        "Managing user accounts, software installations, and system configurations as part of daily support duties",
+        "Implementing backup and disaster recovery procedures ensuring data integrity and business continuity",
+        "Assisting in documentation and reporting of IT processes, incidents, and resolutions for knowledge management",
+        "Collaborating with IT team to evaluate and recommend infrastructure improvements"
       ],
-      technologies: ["Network Administration", "System Support", "IT Infrastructure", "Technical Support", "IT Security"],
+      technologies: ["Windows Server", "Linux Administration", "Network Administration", "System Support", "IT Infrastructure", "IT Security", "ITIL"],
       achievements: [
-        "Supporting smooth IT operations for logistics management",
-        "Contributing to system maintenance and optimization",
-        "Improving service delivery processes"
+        "Maintaining smooth IT operations for logistics management",
+        "Supporting 50+ devices and systems with minimal downtime",
+        "Contributing to infrastructure optimization and reliability improvements"
       ]
     },
     {
-      id: 2,
+      id: 3,
       title: "Freelancer Web Developer",
       company: "Self-Employed",
       location: "Juja, Kiambu",
@@ -75,7 +102,7 @@ export default function Experience() {
       ]
     },
     {
-      id: 3,
+      id: 4,
       title: "Full Stack Engineer & Project Manager",
       company: "Machakos University",
       location: "Machakos",
@@ -97,7 +124,7 @@ export default function Experience() {
       ]
     },
     {
-      id: 4,
+      id: 5,
       title: "ICT and Network Support Intern",
       company: "Bulkstream Limited",
       location: "Mombasa",
@@ -105,7 +132,7 @@ export default function Experience() {
       type: "Internship",
       shortDescription: "Provided comprehensive technical support maintaining 99% system uptime",
       description: [
-        "Delivered comprehensive technical support to 50+ end-users, resolving hardware and software issues",
+        "Delivered comprehensive technical support to 200+ end-users, resolving hardware and software issues",
         "Performed network troubleshooting and connectivity issue resolution, maintaining 99% system uptime",
         "Managed user accounts, software installation, and system configurations as part of daily duties",
         "Implemented backup and recovery procedures ensuring data integrity and business continuity",
@@ -120,7 +147,7 @@ export default function Experience() {
       ]
     },
     {
-      id: 5,
+      id: 6,
       title: "Web Developer & Project Manager",
       company: "Machakos University",
       location: "Machakos",
@@ -176,14 +203,19 @@ export default function Experience() {
         return "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200"
       case "Academic Project":
         return "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200"
+      case "Volunteership":
+        return "bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-200"
       default:
         return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200"
     }
   }
 
+  // Filter experiences based on showAllExperiences toggle
+  const displayedExperiences = showAllExperiences ? experiences : experiences.slice(0, 4)
+
   // Split experiences into two columns
-  const leftColumnExperiences = experiences.filter((_, index) => index % 2 === 0)
-  const rightColumnExperiences = experiences.filter((_, index) => index % 2 === 1)
+  const leftColumnExperiences = displayedExperiences.filter((_, index) => index % 2 === 0)
+  const rightColumnExperiences = displayedExperiences.filter((_, index) => index % 2 === 1)
 
   return (
     <section id="experience" className="py-20 bg-muted/30">
@@ -320,7 +352,7 @@ export default function Experience() {
 
             {/* Single Column Layout - Mobile/Tablet */}
             <div className="lg:hidden space-y-8">
-              {experiences.map((experience, index) => (
+              {displayedExperiences.map((experience, index) => (
                 <motion.div
                   key={experience.id}
                   id={`experience-${index}`}
@@ -343,6 +375,34 @@ export default function Experience() {
               ))}
             </div>
           </div>
+
+          {/* View More/Less Button */}
+          {experiences.length > 4 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="flex justify-center mt-12"
+            >
+              <Button
+                onClick={() => setShowAllExperiences(!showAllExperiences)}
+                className="enhanced-gradient-button text-white font-semibold px-8 py-3 text-lg"
+              >
+                {showAllExperiences ? (
+                  <>
+                    <ChevronUp className="h-5 w-5 mr-2" />
+                    View Less Experience
+                  </>
+                ) : (
+                  <>
+                    <ChevronDown className="h-5 w-5 mr-2" />
+                    View More Experience ({experiences.length - 4} more)
+                  </>
+                )}
+              </Button>
+            </motion.div>
+          )}
         </div>
       </div>
     </section>
