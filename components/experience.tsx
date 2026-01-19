@@ -49,9 +49,9 @@ export default function Experience() {
       ],
       technologies: ["React.js", "Supabase", "JavaScript", "Full-Stack Development", "Real-time Database"],
       achievements: [
-        "Contributing to Kenya's first dedicated built environment platform",
-        "Implementing professional networking features",
-        "Enhancing platform accessibility for 1000+ users"
+        "Contributed to Kenya's first dedicated built environment platform",
+        "Implemented professional networking features",
+        "Enhanced platform accessibility for 500+ users"
       ]
     },
     {
