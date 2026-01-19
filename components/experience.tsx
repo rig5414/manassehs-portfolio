@@ -38,7 +38,7 @@ export default function Experience() {
       location: "Nairobi (Remote)",
       period: "Dec 2025 - Jan 2026",
       type: "Freelance",
-      shortDescription: "Contributing to Kenya's first dedicated platform for built environment professionals",
+      shortDescription: "Contributed to Kenya's first dedicated platform for built environment professionals",
       description: [
         "Actively contributed to BuildLink, a digital ecosystem connecting architects, engineers, planners, and construction professionals across Kenya",
         "Developed and maintained features for professional profile management and project showcase functionality",
