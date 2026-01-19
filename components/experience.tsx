@@ -36,16 +36,16 @@ export default function Experience() {
       title: "Freelancer Web Developer",
       company: "BuildLink",
       location: "Nairobi (Remote)",
-      period: "Dec 2025 - Present",
+      period: "Dec 2025 - Jan 2026",
       type: "Freelance",
       shortDescription: "Contributing to Kenya's first dedicated platform for built environment professionals",
       description: [
-        "Actively contributing to BuildLink, a digital ecosystem connecting architects, engineers, planners, and construction professionals across Kenya",
-        "Developing and maintaining features for professional profile management and project showcase functionality",
-        "Collaborating with cross-functional team to enhance platform UI/UX for built environment professionals",
-        "Implementing responsive components using React.js for seamless multi-device experience",
-        "Managing real-time data synchronization with Supabase backend for professional networking features",
-        "Contributing to codebase optimization and performance improvements for the growing community platform"
+        "Actively contributed to BuildLink, a digital ecosystem connecting architects, engineers, planners, and construction professionals across Kenya",
+        "Developed and maintained features for professional profile management and project showcase functionality",
+        "Collaborated with cross-functional team to enhance platform UI/UX for built environment professionals",
+        "Implemented responsive components using React.js for seamless multi-device experience",
+        "Managed real-time data synchronization with Supabase backend for professional networking features",
+        "Contributed to codebase optimization and performance improvements for the growing community platform"
       ],
       technologies: ["React.js", "Supabase", "JavaScript", "Full-Stack Development", "Real-time Database"],
       achievements: [
