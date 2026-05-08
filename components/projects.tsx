@@ -137,7 +137,7 @@ export default function Projects() {
       demoLink: "https://rig5414.github.io/mwalimu-pos/public/download.html", // Update with a demo video link or local demo instructions if public
       githubLink: "https://github.com/rig5414/mwalimu-pos/", // Update if the repo is public (consider keeping private for client confidentiality)
       fullDescription:
-        "Developed as a custom solution for Mwalimu Uniforms, this Electron-based POS system solves the challenge of unreliable internet in retail environments. The application uses SQLite for instant local transactions and automatically syncs data to Supabase when connectivity is restored. Key features include direct integration with the M-Pesa Daraja API for instant payment confirmation, automated thermal receipt printing, and a comprehensive Inventory Management System (IMS). The project involved full hardware setup (costing KES 25,000) and software deployment, demonstrating end-to-end delivery capability for local SMEs.",
+        "Developed as a custom solution for Mwalimu Uniforms, this Electron-based POS system solves the challenge of unreliable internet in retail environments. The application uses SQLite for instant local transactions and automatically syncs data to Supabase when connectivity is restored. Key features include direct integration with the M-Pesa Daraja API for instant payment confirmation, automated thermal receipt printing, and a comprehensive Inventory Management System (IMS). The project involved full hardware setup and software deployment, demonstrating end-to-end delivery capability for local SMEs.",
     },
    
     // Page 2 - Projects 5-7
