@@ -37,28 +37,39 @@ export default function Projects() {
     {
       id: 1,
       title: "BuildLink",
-      shortDescription: "Kenya's first dedicated platform for built environment professionals.",
-      description: "A digital ecosystem connecting architects, engineers, planners, and construction professionals.",
+      shortDescription:
+        "Kenya's first dedicated platform for built environment professionals.",
+      description:
+        "A digital ecosystem connecting architects, engineers, planners, and construction professionals.",
       image: "/buildlink.png",
-      tags: ["React.js", "Supabase", "Full-Stack", "Real-time Database", "Professional Network"],
+      tags: [
+        "React.js",
+        "Supabase",
+        "Full-Stack",
+        "Real-time Database",
+        "Professional Network",
+      ],
       features: [
         "Professional profile management and verification",
         "Project showcase and portfolio building",
         "Professional networking and collaboration",
         "Event and tender marketplace",
         "Knowledge exchange and resources",
-        "Real-time data synchronization"
+        "Real-time data synchronization",
       ],
       demoLink: "https://buildlink.co.ke/",
       githubLink: "#",
-      fullDescription: "BuildLink is a comprehensive digital ecosystem designed for architects, engineers, planners, students, and construction professionals across Kenya. Built with React.js and Supabase, it provides a unified space to network, learn, showcase, and grow in the built environment industry. The platform features professional profiles, project showcases, event listings, and curated industry content.",
-      isCodeDisabled: true
+      fullDescription:
+        "BuildLink is a comprehensive digital ecosystem designed for architects, engineers, planners, students, and construction professionals across Kenya. Built with React.js and Supabase, it provides a unified space to network, learn, showcase, and grow in the built environment industry. The platform features professional profiles, project showcases, event listings, and curated industry content.",
+      isCodeDisabled: true,
     },
     {
       id: 2,
       title: "Quarry Management System",
-      shortDescription: "Custom quarry management website with interactive features.",
-      description: "A comprehensive quarry management system built for efficient operations management.",
+      shortDescription:
+        "Custom quarry management website with interactive features.",
+      description:
+        "A comprehensive quarry management system built for efficient operations management.",
       image: "/placeholder-sw6cj.png",
       tags: ["Next.js", "Tailwind CSS", "JavaScript", "Responsive Design"],
       features: [
@@ -66,17 +77,20 @@ export default function Projects() {
         "Real-time data tracking and reporting",
         "Responsive design for mobile and desktop",
         "Client-focused feature implementation",
-        "Efficient project delivery within timeline"
+        "Efficient project delivery within timeline",
       ],
       demoLink: "https://v0-natural-stone-website.vercel.app/",
       githubLink: "https://github.com/rig5414/quarry-site",
-      fullDescription: "Developed as a freelance project, this quarry management system provides comprehensive tools for managing quarry operations. Built with React.js and styled with Tailwind CSS, the system features an intuitive interface for tracking operations, managing resources, and generating reports. The project was delivered on time and met all client specifications through effective communication and iterative development.",
+      fullDescription:
+        "Developed as a freelance project, this quarry management system provides comprehensive tools for managing quarry operations. Built with React.js and styled with Tailwind CSS, the system features an intuitive interface for tracking operations, managing resources, and generating reports. The project was delivered on time and met all client specifications through effective communication and iterative development.",
     },
     {
       id: 3,
       title: "E-Commerce Platform",
-      shortDescription: "Localized e-commerce platform with full-stack implementation.",
-      description: "A complete e-commerce solution with modern web technologies and user authentication.",
+      shortDescription:
+        "Localized e-commerce platform with full-stack implementation.",
+      description:
+        "A complete e-commerce solution with modern web technologies and user authentication.",
       image: "/e-commerce-platform-interface.png",
       tags: ["React.js", "Node.js", "Full-Stack", "Database Integration"],
       features: [
@@ -84,36 +98,45 @@ export default function Projects() {
         "User authentication and authorization",
         "Responsive frontend design",
         "RESTful API development",
-        "Database connectivity and management"
+        "Database connectivity and management",
       ],
       demoLink: "https://mtshopnextdoor.netlify.app/",
       githubLink: "https://github.com/rig5414/shop-next-door",
-      fullDescription: "Led the development of a localized e-commerce platform as part of a university project. The platform features a complete product management system, user authentication, shopping cart functionality, and order processing. Built with React.js for the frontend and Node.js for the backend, with comprehensive API integration and database management.",
+      fullDescription:
+        "Led the development of a localized e-commerce platform as part of a university project. The platform features a complete product management system, user authentication, shopping cart functionality, and order processing. Built with React.js for the frontend and Node.js for the backend, with comprehensive API integration and database management.",
     },
     {
       id: 4,
       title: "Network Infrastructure Optimization",
       shortDescription: "IT infrastructure improvements achieving 99% uptime.",
-      description: "Comprehensive network troubleshooting and infrastructure optimization project.",
+      description:
+        "Comprehensive network troubleshooting and infrastructure optimization project.",
       image: "/network-monitoring-dashboard.png",
-      tags: ["Network Administration", "System Optimization", "ITIL", "Infrastructure"],
+      tags: [
+        "Network Administration",
+        "System Optimization",
+        "ITIL",
+        "Infrastructure",
+      ],
       features: [
         "Network troubleshooting and optimization",
         "System performance monitoring",
         "99% uptime achievement",
         "Comprehensive documentation",
-        "Team collaboration and improvement"
+        "Team collaboration and improvement",
       ],
       demoLink: "#",
       githubLink: "#",
-      fullDescription: "During my internship at Bulkstream Limited, I led network infrastructure optimization efforts that resulted in maintaining 99% system uptime. The project involved comprehensive network troubleshooting, performance monitoring, and implementing best practices for system reliability. Provided technical support to 50+ end-users while maintaining detailed documentation of all improvements and resolutions.",
+      fullDescription:
+        "During my internship at Bulkstream Limited, I led network infrastructure optimization efforts that resulted in maintaining 99% system uptime. The project involved comprehensive network troubleshooting, performance monitoring, and implementing best practices for system reliability. Provided technical support to 50+ end-users while maintaining detailed documentation of all improvements and resolutions.",
     },
     // Page 2 - Projects 5-7
     {
       id: 5,
       title: "Vehicle Tracker System",
       shortDescription: "Real-time vehicle tracking and management platform.",
-      description: "A comprehensive vehicle tracking system with real-time location monitoring.",
+      description:
+        "A comprehensive vehicle tracking system with real-time location monitoring.",
       image: "/vehicle-tracker.png",
       tags: ["React.js", "Node.js", "Google Maps API", "Real-time Tracking"],
       features: [
@@ -122,17 +145,20 @@ export default function Projects() {
         "Route optimization and analytics",
         "Driver behavior monitoring",
         "Maintenance scheduling and alerts",
-        "Comprehensive reporting dashboard"
+        "Comprehensive reporting dashboard",
       ],
       demoLink: "https://vehicle-tracker-tau.vercel.app/",
       githubLink: "https://github.com/rig5414/vehicle-tracker",
-      fullDescription: "A sophisticated vehicle tracking system built with React.js and Node.js that provides real-time monitoring and management of vehicle fleets. The system integrates Google Maps API for location tracking, includes GPS-based analytics, and offers comprehensive reporting features. Ideal for logistics companies, delivery services, and fleet management operations.",
+      fullDescription:
+        "A sophisticated vehicle tracking system built with React.js and Node.js that provides real-time monitoring and management of vehicle fleets. The system integrates Google Maps API for location tracking, includes GPS-based analytics, and offers comprehensive reporting features. Ideal for logistics companies, delivery services, and fleet management operations.",
     },
     {
       id: 6,
       title: "Portfolio Website",
-      shortDescription: "Personal portfolio website showcasing projects and experience.",
-      description: "My own portfolio website built with modern web technologies.",
+      shortDescription:
+        "Personal portfolio website showcasing projects and experience.",
+      description:
+        "My own portfolio website built with modern web technologies.",
       image: "/portfolio.jpg",
       tags: ["Next.js", "React.js", "Tailwind CSS", "TypeScript", "Vercel"],
       features: [
@@ -141,17 +167,20 @@ export default function Projects() {
         "Experience timeline with animations",
         "Certificate and skills gallery",
         "Contact form with email integration",
-        "Dark mode support"
+        "Dark mode support",
       ],
       demoLink: "https://tellefolio.vercel.app/",
       githubLink: "https://github.com/rig5414/manassehs-portfolio",
-      fullDescription: "This is my personal portfolio website built with Next.js, React.js, and Tailwind CSS. It showcases my professional journey, projects, certifications, and skills with smooth animations and a modern design. The site is fully responsive, supports dark mode, and includes an integrated contact form with EmailJS for direct communication. Deployed on Vercel for optimal performance.",
+      fullDescription:
+        "This is my personal portfolio website built with Next.js, React.js, and Tailwind CSS. It showcases my professional journey, projects, certifications, and skills with smooth animations and a modern design. The site is fully responsive, supports dark mode, and includes an integrated contact form with EmailJS for direct communication. Deployed on Vercel for optimal performance.",
     },
     {
       id: 7,
       title: "Hotel Management Website",
-      shortDescription: "Custom hotel management system with intuitive user interface.",
-      description: "A hotel management system focusing on user experience and interface design.",
+      shortDescription:
+        "Custom hotel management system with intuitive user interface.",
+      description:
+        "A hotel management system focusing on user experience and interface design.",
       image: "/hotel-management-system-interface.png",
       tags: ["HTML", "CSS", "JavaScript", "UI/UX Design"],
       features: [
@@ -159,13 +188,44 @@ export default function Projects() {
         "Guest registration and check-in/out",
         "Intuitive user interface design",
         "Responsive web design",
-        "Academic project excellence"
+        "Academic project excellence",
       ],
       demoLink: "#",
       githubLink: "#",
-      fullDescription: "Developed as part of academic coursework, this hotel management website demonstrates proficiency in fundamental web technologies. The system includes room booking functionality, guest management, and an intuitive user interface designed with a focus on user experience optimization. Built using HTML, CSS, and JavaScript with emphasis on clean code and responsive design.",
-    }
-  ]
+      fullDescription:
+        "Developed as part of academic coursework, this hotel management website demonstrates proficiency in fundamental web technologies. The system includes room booking functionality, guest management, and an intuitive user interface designed with a focus on user experience optimization. Built using HTML, CSS, and JavaScript with emphasis on clean code and responsive design.",
+    },
+   /* {
+      id: 8, // Ensure this is the next unique ID in your sequence
+      title: "Mwalimu Uniforms POS",
+      shortDescription:
+        "Custom offline-first POS with M-Pesa integration and inventory management.",
+      description:
+        "A robust desktop Point of Sale system built for a local Kenyan business, featuring offline capabilities, real-time cloud sync, and thermal printing.",
+      image: "/placeholder-pos.png", // Replace with your actual project screenshot path
+      tags: [
+        "Electron",
+        "SQLite",
+        "Supabase",
+        "M-Pesa API",
+        "Tailwind CSS",
+        "Node.js",
+      ],
+      features: [
+        "Offline-first architecture with automatic cloud sync via Supabase",
+        "Direct M-Pesa STK Push integration for seamless payments",
+        "Real-time inventory management and low-stock alerts",
+        "Thermal printer support for receipt generation",
+        "Secure local database (SQLite) with encrypted cloud backup",
+        "Responsive UI optimized for touch screens and desktop",
+        "Sales analytics dashboard for business insights",
+      ],
+      demoLink: "#", // Update with a demo video link or local demo instructions if public
+      githubLink: "#", // Update if the repo is public (consider keeping private for client confidentiality)
+      fullDescription:
+        "Developed as a custom solution for Mwalimu Uniforms, this Electron-based POS system solves the challenge of unreliable internet in retail environments. The application uses SQLite for instant local transactions and automatically syncs data to Supabase when connectivity is restored. Key features include direct integration with the M-Pesa Daraja API for instant payment confirmation, automated thermal receipt printing, and a comprehensive Inventory Management System (IMS). The project involved full hardware setup (costing KES 25,000) and software deployment, demonstrating end-to-end delivery capability for local SMEs.",
+    }, */
+  ];
 
   const projectsPerPage = 4
   const totalPages = Math.ceil(projects.length / projectsPerPage)

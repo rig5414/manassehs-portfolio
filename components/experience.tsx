@@ -32,36 +32,111 @@ export default function Experience() {
 
   const experiences: Experience[] = [
     {
-      id: 1,
+      id: 1, 
+      title: "Graduate Trainee ICT",
+      company: "Bulkstream Limited",
+      location: "Mombasa",
+      period: "April 2026 - Present",
+      type: "Graduate Trainee",
+      shortDescription:
+        "Undergoing a structured rotational program to master enterprise ICT infrastructure, network operations, and digital transformation strategies.",
+      description: [
+        "Participating in a comprehensive graduate training program covering network administration, system support, and IT security protocols.",
+        "Rotating through key departments to gain hands-on experience in logistics IT infrastructure and enterprise resource planning (ERP) systems.",
+        "Assisting senior engineers in network monitoring, configuration, and troubleshooting for critical logistics operations.",
+        "Implementing best practices for system maintenance, including Windows/Linux updates and security patch management.",
+        "Contributing to data integrity initiatives by assisting in backup procedures and disaster recovery testing.",
+        "Collaborating with the IT team to evaluate emerging technologies for infrastructure optimization.",
+        "Documenting technical processes, incident reports, and training materials for knowledge management.",
+        "Supporting user account management and hardware/software deployment across the organization.",
+      ],
+      technologies: [
+        "Enterprise Network Administration",
+        "IT Infrastructure Management",
+        "System Administration (Windows/Linux)",
+        "ITIL Framework",
+        "Cybersecurity Best Practices",
+        "ERP Systems",
+        "Technical Documentation",
+      ],
+      achievements: [
+        "Successfully transitioning from internship to a formal graduate trainee program.",
+        "Gaining exposure to enterprise-level logistics IT operations.",
+        "Contributing to infrastructure stability while developing advanced technical competencies.",
+      ],
+    },
+    {
+      id: 2,
+      title: "Freelance Full-Stack Developer",
+      company: "Mwalimu Uniforms",
+      location: "Kericho (Remote)",
+      period: "April 2026 - Present",
+      type: "Freelance",
+      shortDescription:
+        "Building a custom Electron-based POS with M-Pesa integration and cloud sync",
+      description: [
+        "Architecting and developing a custom Point-of-Sale (POS) desktop application using Electron.js, SQLite, and Supabase for a retail client in Kericho",
+        "Integrating M-Pesa STK Push API directly into the POS interface, enabling seamless mobile money transactions without third-party hardware",
+        "Implementing offline-first architecture allowing the system to function during internet outages and sync data to the cloud once connectivity is restored",
+        "Engineering low-level thermal receipt printing support using ESC/POS commands for Epson-compatible printers",
+        "Designing a role-based access control system (RBAC) to manage permissions for cashiers, managers, and administrators",
+        "Conducting remote requirements gathering, hardware consultation, and client training via virtual sessions",
+      ],
+      technologies: [
+        "Electron.js",
+        "SQLite",
+        "Supabase",
+        "M-Pesa API",
+        "ESC/POS",
+        "Offline-First Architecture",
+        "Remote Project Management",
+      ],
+      achievements: [
+        "Currently delivering a fully functional POS system replacing manual billing, reducing transaction time by ~40%",
+        "Successfully negotiated software pricing by presenting market analysis against local competitors",
+        "Enabling real-time inventory tracking across multiple stock locations via cloud synchronization",
+        "Achieving 100% client satisfaction with on-time delivery and post-launch support",
+      ],
+    },
+    {
+      id: 3,
       title: "Freelancer Web Developer",
       company: "BuildLink",
       location: "Nairobi (Remote)",
       period: "Dec 2025 - Jan 2026",
       type: "Freelance",
-      shortDescription: "Contributed to Kenya's first dedicated platform for built environment professionals",
+      shortDescription:
+        "Contributed to Kenya's first dedicated platform for built environment professionals",
       description: [
         "Actively contributed to BuildLink, a digital ecosystem connecting architects, engineers, planners, and construction professionals across Kenya",
         "Developed and maintained features for professional profile management and project showcase functionality",
         "Collaborated with cross-functional team to enhance platform UI/UX for built environment professionals",
         "Implemented responsive components using React.js for seamless multi-device experience",
         "Managed real-time data synchronization with Supabase backend for professional networking features",
-        "Contributed to codebase optimization and performance improvements for the growing community platform"
+        "Contributed to codebase optimization and performance improvements for the growing community platform",
       ],
-      technologies: ["React.js", "Supabase", "JavaScript", "Full-Stack Development", "Real-time Database"],
+      technologies: [
+        "React.js",
+        "Supabase",
+        "JavaScript",
+        "Full-Stack Development",
+        "Real-time Database",
+      ],
       achievements: [
         "Contributed to Kenya's first dedicated built environment platform",
         "Implemented professional networking features",
-        "Enhanced platform accessibility for 500+ users"
-      ]
+        "Enhanced platform accessibility for 500+ users",
+      ],
     },
     {
-      id: 2,
+      id: 4,
       title: "ICT Support Intern",
       company: "Bulkstream Logistics Limited",
       location: "Mombasa",
-      period: "Sep 2025 - Present",
+      period: "Sep 2025 - March 2026",
       type: "Internship",
-      shortDescription: "Providing comprehensive ICT support for logistics operations and infrastructure",
+      shortDescription:
+        "Providing comprehensive ICT support for logistics operations and infrastructure",
       description: [
         "Providing comprehensive technical support to logistics operations team, managing 50+ devices and systems",
         "Supporting network administration tasks including network monitoring, configuration, and troubleshooting for seamless operations",
@@ -71,102 +146,137 @@ export default function Experience() {
         "Managing user accounts, software installations, and system configurations as part of daily support duties",
         "Implementing backup and disaster recovery procedures ensuring data integrity and business continuity",
         "Assisting in documentation and reporting of IT processes, incidents, and resolutions for knowledge management",
-        "Collaborating with IT team to evaluate and recommend infrastructure improvements"
+        "Collaborating with IT team to evaluate and recommend infrastructure improvements",
       ],
-      technologies: ["Windows Server", "Linux Administration", "Network Administration", "System Support", "IT Infrastructure", "IT Security", "ITIL"],
+      technologies: [
+        "Windows Server",
+        "Linux Administration",
+        "Network Administration",
+        "System Support",
+        "IT Infrastructure",
+        "IT Security",
+        "ITIL",
+      ],
       achievements: [
         "Maintaining smooth IT operations for logistics management",
         "Supporting 50+ devices and systems with minimal downtime",
-        "Contributing to infrastructure optimization and reliability improvements"
-      ]
+        "Contributing to infrastructure optimization and reliability improvements",
+      ],
     },
     {
-      id: 3,
+      id: 5,
       title: "Freelancer Web Developer",
       company: "Self-Employed",
       location: "Juja, Kiambu",
       period: "Feb 2025 - May 2025",
       type: "Freelance",
-      shortDescription: "Developed custom quarry management website with interactive features",
+      shortDescription:
+        "Developed custom quarry management website with interactive features",
       description: [
         "Independently developed a custom quarry management website with interactive features",
         "Utilized React.js and Tailwind CSS for responsive frontend development",
         "Implemented client requirements through effective communication and iterative development",
-        "Delivered fully functional web solution meeting client specifications and timeline"
+        "Delivered fully functional web solution meeting client specifications and timeline",
       ],
-      technologies: ["React.js", "Tailwind CSS", "JavaScript", "Web Development"],
+      technologies: [
+        "React.js",
+        "Tailwind CSS",
+        "JavaScript",
+        "Web Development",
+      ],
       achievements: [
         "100% client satisfaction rate",
         "Delivered project 2 weeks ahead of schedule",
-        "Implemented 15+ interactive features"
-      ]
+        "Implemented 15+ interactive features",
+      ],
     },
     {
-      id: 4,
+      id: 6,
       title: "Full Stack Engineer & Project Manager",
       company: "Machakos University",
       location: "Machakos",
       period: "Oct 2024 - April 2025",
       type: "Project",
-      shortDescription: "Led full-stack development of localized e-commerce platform",
+      shortDescription:
+        "Led full-stack development of localized e-commerce platform",
       description: [
         "Led the full-stack development of a localized e-commerce platform using React.js and Node.js",
         "Implemented responsive frontend design principles and optimized user experience",
         "Developed and integrated backend APIs with database connectivity and user authentication",
         "Managed complete project lifecycle from requirements gathering to deployment",
-        "Coordinated with stakeholders to ensure project deliverables met technical specifications"
+        "Coordinated with stakeholders to ensure project deliverables met technical specifications",
       ],
-      technologies: ["React.js", "Node.js", "Full-Stack", "Project Management", "API Development"],
+      technologies: [
+        "React.js",
+        "Node.js",
+        "Full-Stack",
+        "Project Management",
+        "API Development",
+      ],
       achievements: [
         "Successfully managed team of 4 developers",
         "Delivered scalable e-commerce solution",
-        "Implemented secure payment integration"
-      ]
+        "Implemented secure payment integration",
+      ],
     },
     {
-      id: 5,
+      id: 7,
       title: "ICT and Network Support Intern",
       company: "Bulkstream Limited",
       location: "Mombasa",
       period: "May 2024 - Sep 2024",
       type: "Internship",
-      shortDescription: "Provided comprehensive technical support maintaining 99% system uptime",
+      shortDescription:
+        "Provided comprehensive technical support maintaining 99% system uptime",
       description: [
         "Delivered comprehensive technical support to 200+ end-users, resolving hardware and software issues",
         "Performed network troubleshooting and connectivity issue resolution, maintaining 99% system uptime",
         "Managed user accounts, software installation, and system configurations as part of daily duties",
         "Implemented backup and recovery procedures ensuring data integrity and business continuity",
         "Maintained detailed documentation of support activities and technical resolutions",
-        "Collaborated with IT team to optimize infrastructure performance and implement improvements"
+        "Collaborated with IT team to optimize infrastructure performance and implement improvements",
       ],
-      technologies: ["Windows", "Linux", "Network Administration", "System Support", "ITIL"],
+      technologies: [
+        "Windows",
+        "Linux",
+        "Network Administration",
+        "System Support",
+        "ITIL",
+      ],
       achievements: [
         "Maintained 99% system uptime",
         "Supported 50+ end users daily",
-        "Reduced ticket resolution time by 40%"
-      ]
+        "Reduced ticket resolution time by 40%",
+      ],
     },
     {
-      id: 6,
+      id: 8,
       title: "Web Developer & Project Manager",
       company: "Machakos University",
       location: "Machakos",
       period: "Feb 2023 - March 2023",
       type: "Academic Project",
-      shortDescription: "Built custom hotel management website with intuitive UI",
+      shortDescription:
+        "Built custom hotel management website with intuitive UI",
       description: [
         "Developed a custom hotel management website using HTML, CSS, and JavaScript",
         "Designed intuitive user interfaces focusing on user experience optimization",
-        "Successfully completed project as part of academic coursework, demonstrating technical proficiency"
+        "Successfully completed project as part of academic coursework, demonstrating technical proficiency",
       ],
-      technologies: ["HTML", "CSS", "JavaScript", "Web Development", "UI/UX Design"],
+      technologies: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Web Development",
+        "UI/UX Design",
+      ],
       achievements: [
         "Achieved 95% project grade",
         "Implemented booking system",
-        "Created responsive design"
-      ]
-    }
-  ]
+        "Created responsive design",
+      ],
+    },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -205,6 +315,12 @@ export default function Experience() {
         return "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200"
       case "Volunteership":
         return "bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-200"
+      case "Contract":
+        return "bg-stone-100 text-stone-800 dark:bg-stone-900 dark:text-stone-200"
+      case "Graduate Trainee":
+        return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200"
+      case "Employed":
+        return "bg-emerald-100 text-emerald-800 dark:bg-emerald-900 dark:text-emerald-200"
       default:
         return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200"
     }
