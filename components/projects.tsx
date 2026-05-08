@@ -65,24 +65,28 @@ export default function Projects() {
     },
     {
       id: 2,
-      title: "Quarry Management System",
-      shortDescription:
-        "Custom quarry management website with interactive features.",
+      title: "Network Infrastructure Optimization",
+      shortDescription: "IT infrastructure improvements achieving 99% uptime.",
       description:
-        "A comprehensive quarry management system built for efficient operations management.",
-      image: "/placeholder-sw6cj.png",
-      tags: ["Next.js", "Tailwind CSS", "JavaScript", "Responsive Design"],
-      features: [
-        "Interactive dashboard for operations management",
-        "Real-time data tracking and reporting",
-        "Responsive design for mobile and desktop",
-        "Client-focused feature implementation",
-        "Efficient project delivery within timeline",
+        "Comprehensive network troubleshooting and infrastructure optimization project.",
+      image: "/network-monitoring-dashboard.png",
+      tags: [
+        "Network Administration",
+        "System Optimization",
+        "ITIL",
+        "Infrastructure",
       ],
-      demoLink: "https://v0-natural-stone-website.vercel.app/",
-      githubLink: "https://github.com/rig5414/quarry-site",
+      features: [
+        "Network troubleshooting and optimization",
+        "System performance monitoring",
+        "99% uptime achievement",
+        "Comprehensive documentation",
+        "Team collaboration and improvement",
+      ],
+      demoLink: "#",
+      githubLink: "#",
       fullDescription:
-        "Developed as a freelance project, this quarry management system provides comprehensive tools for managing quarry operations. Built with React.js and styled with Tailwind CSS, the system features an intuitive interface for tracking operations, managing resources, and generating reports. The project was delivered on time and met all client specifications through effective communication and iterative development.",
+        "During my internship at Bulkstream Limited, I led network infrastructure optimization efforts that resulted in maintaining 99% system uptime. The project involved comprehensive network troubleshooting, performance monitoring, and implementing best practices for system reliability. Provided technical support to 50+ end-users while maintaining detailed documentation of all improvements and resolutions.",
     },
     {
       id: 3,
@@ -107,29 +111,35 @@ export default function Projects() {
     },
     {
       id: 4,
-      title: "Network Infrastructure Optimization",
-      shortDescription: "IT infrastructure improvements achieving 99% uptime.",
+      title: "Mwalimu Uniforms POS",
+      shortDescription:
+        "Custom offline-first POS with M-Pesa integration and inventory management.",
       description:
-        "Comprehensive network troubleshooting and infrastructure optimization project.",
-      image: "/network-monitoring-dashboard.png",
+        "A robust desktop Point of Sale system built for a local Kenyan business, featuring offline capabilities, real-time cloud sync, and thermal printing.",
+      image: "/mwalimu-pos.png",
       tags: [
-        "Network Administration",
-        "System Optimization",
-        "ITIL",
-        "Infrastructure",
+        "Electron",
+        "SQLite",
+        "Supabase",
+        "M-Pesa API",
+        "Tailwind CSS",
+        "Node.js",
       ],
       features: [
-        "Network troubleshooting and optimization",
-        "System performance monitoring",
-        "99% uptime achievement",
-        "Comprehensive documentation",
-        "Team collaboration and improvement",
+        "Offline-first architecture with automatic cloud sync via Supabase",
+        "Direct M-Pesa STK Push integration for seamless payments",
+        "Real-time inventory management and low-stock alerts",
+        "Thermal printer support for receipt generation",
+        "Secure local database (SQLite) with encrypted cloud backup",
+        "Responsive UI optimized for touch screens and desktop",
+        "Sales analytics dashboard for business insights",
       ],
-      demoLink: "#",
-      githubLink: "#",
+      demoLink: "https://rig5414.github.io/mwalimu-pos/public/download.html", // Update with a demo video link or local demo instructions if public
+      githubLink: "https://github.com/rig5414/mwalimu-pos/", // Update if the repo is public (consider keeping private for client confidentiality)
       fullDescription:
-        "During my internship at Bulkstream Limited, I led network infrastructure optimization efforts that resulted in maintaining 99% system uptime. The project involved comprehensive network troubleshooting, performance monitoring, and implementing best practices for system reliability. Provided technical support to 50+ end-users while maintaining detailed documentation of all improvements and resolutions.",
+        "Developed as a custom solution for Mwalimu Uniforms, this Electron-based POS system solves the challenge of unreliable internet in retail environments. The application uses SQLite for instant local transactions and automatically syncs data to Supabase when connectivity is restored. Key features include direct integration with the M-Pesa Daraja API for instant payment confirmation, automated thermal receipt printing, and a comprehensive Inventory Management System (IMS). The project involved full hardware setup (costing KES 25,000) and software deployment, demonstrating end-to-end delivery capability for local SMEs.",
     },
+   
     // Page 2 - Projects 5-7
     {
       id: 5,
@@ -154,6 +164,27 @@ export default function Projects() {
     },
     {
       id: 6,
+      title: "Quarry Management System",
+      shortDescription:
+        "Custom quarry management website with interactive features.",
+      description:
+        "A comprehensive quarry management system built for efficient operations management.",
+      image: "/placeholder-sw6cj.png",
+      tags: ["Next.js", "Tailwind CSS", "JavaScript", "Responsive Design"],
+      features: [
+        "Interactive dashboard for operations management",
+        "Real-time data tracking and reporting",
+        "Responsive design for mobile and desktop",
+        "Client-focused feature implementation",
+        "Efficient project delivery within timeline",
+      ],
+      demoLink: "https://v0-natural-stone-website.vercel.app/",
+      githubLink: "https://github.com/rig5414/quarry-site",
+      fullDescription:
+        "Developed as a freelance project, this quarry management system provides comprehensive tools for managing quarry operations. Built with React.js and styled with Tailwind CSS, the system features an intuitive interface for tracking operations, managing resources, and generating reports. The project was delivered on time and met all client specifications through effective communication and iterative development.",
+    },
+    {
+      id: 7,
       title: "Portfolio Website",
       shortDescription:
         "Personal portfolio website showcasing projects and experience.",
@@ -174,8 +205,8 @@ export default function Projects() {
       fullDescription:
         "This is my personal portfolio website built with Next.js, React.js, and Tailwind CSS. It showcases my professional journey, projects, certifications, and skills with smooth animations and a modern design. The site is fully responsive, supports dark mode, and includes an integrated contact form with EmailJS for direct communication. Deployed on Vercel for optimal performance.",
     },
-    {
-      id: 7,
+    /* {
+      id: 8,
       title: "Hotel Management Website",
       shortDescription:
         "Custom hotel management system with intuitive user interface.",
@@ -194,36 +225,6 @@ export default function Projects() {
       githubLink: "#",
       fullDescription:
         "Developed as part of academic coursework, this hotel management website demonstrates proficiency in fundamental web technologies. The system includes room booking functionality, guest management, and an intuitive user interface designed with a focus on user experience optimization. Built using HTML, CSS, and JavaScript with emphasis on clean code and responsive design.",
-    },
-   /* {
-      id: 8, // Ensure this is the next unique ID in your sequence
-      title: "Mwalimu Uniforms POS",
-      shortDescription:
-        "Custom offline-first POS with M-Pesa integration and inventory management.",
-      description:
-        "A robust desktop Point of Sale system built for a local Kenyan business, featuring offline capabilities, real-time cloud sync, and thermal printing.",
-      image: "/placeholder-pos.png", // Replace with your actual project screenshot path
-      tags: [
-        "Electron",
-        "SQLite",
-        "Supabase",
-        "M-Pesa API",
-        "Tailwind CSS",
-        "Node.js",
-      ],
-      features: [
-        "Offline-first architecture with automatic cloud sync via Supabase",
-        "Direct M-Pesa STK Push integration for seamless payments",
-        "Real-time inventory management and low-stock alerts",
-        "Thermal printer support for receipt generation",
-        "Secure local database (SQLite) with encrypted cloud backup",
-        "Responsive UI optimized for touch screens and desktop",
-        "Sales analytics dashboard for business insights",
-      ],
-      demoLink: "#", // Update with a demo video link or local demo instructions if public
-      githubLink: "#", // Update if the repo is public (consider keeping private for client confidentiality)
-      fullDescription:
-        "Developed as a custom solution for Mwalimu Uniforms, this Electron-based POS system solves the challenge of unreliable internet in retail environments. The application uses SQLite for instant local transactions and automatically syncs data to Supabase when connectivity is restored. Key features include direct integration with the M-Pesa Daraja API for instant payment confirmation, automated thermal receipt printing, and a comprehensive Inventory Management System (IMS). The project involved full hardware setup (costing KES 25,000) and software deployment, demonstrating end-to-end delivery capability for local SMEs.",
     }, */
   ];
 
