@@ -31,7 +31,7 @@ export default function Experience() {
   }
 
   const experiences: Experience[] = [
-    {
+   {
       id: 1, 
       title: "Graduate Trainee ICT",
       company: "Bulkstream Limited",
@@ -39,16 +39,13 @@ export default function Experience() {
       period: "April 2026 - Present",
       type: "Graduate Trainee",
       shortDescription:
-        "Undergoing a structured rotational program to master enterprise ICT infrastructure, network operations, and digital transformation strategies.",
+        "Managing enterprise ICT infrastructure and core network operations while executing ITIL-aligned service delivery for business continuity.",
       description: [
-        "Participating in a comprehensive graduate training program covering network administration, system support, and IT security protocols.",
-        "Rotating through key departments to gain hands-on experience in logistics IT infrastructure and enterprise resource planning (ERP) systems.",
-        "Assisting senior engineers in network monitoring, configuration, and troubleshooting for critical logistics operations.",
-        "Implementing best practices for system maintenance, including Windows/Linux updates and security patch management.",
-        "Contributing to data integrity initiatives by assisting in backup procedures and disaster recovery testing.",
-        "Collaborating with the IT team to evaluate emerging technologies for infrastructure optimization.",
-        "Documenting technical processes, incident reports, and training materials for knowledge management.",
-        "Supporting user account management and hardware/software deployment across the organization.",
+        "Delivering tier-1/tier-2 ICT support, managing hardware diagnostics, OS deployment (Windows/Linux), and peripheral troubleshooting.",
+        "Monitoring core network infrastructure, configuring routing/switching basics, and troubleshooting connectivity to optimize logistics ERP systems.",
+        "Executing ITIL-aligned incident management workflows, tracking service requests within SLAs to minimize operational downtime.",
+        "Administering endpoint security configurations, automated data backup routines, disaster recovery testing, and user directory provisioning.",
+        "Authoring comprehensive technical manuals and standard operating procedures (SOPs) to streamline corporate knowledge management."
       ],
       technologies: [
         "Enterprise Network Administration",
@@ -60,9 +57,9 @@ export default function Experience() {
         "Technical Documentation",
       ],
       achievements: [
-        "Successfully transitioning from internship to a formal graduate trainee program.",
-        "Gaining exposure to enterprise-level logistics IT operations.",
-        "Contributing to infrastructure stability while developing advanced technical competencies.",
+        "Advanced from ICT Intern to Graduate Trainee based on technical aptitude and reliable service delivery.",
+        "Maintaining high system and network reliability across business operations supporting 200+ users and devices.",
+        "Streamlining support tracking and documentation to accelerate incident resolution loops for critical applications."
       ],
     },
     {
