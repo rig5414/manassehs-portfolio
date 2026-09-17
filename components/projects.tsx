@@ -116,7 +116,7 @@ export default function Projects() {
         "Custom offline-first POS with M-Pesa integration and inventory management.",
       description:
         "A robust desktop Point of Sale system built for a local Kenyan business, featuring offline capabilities, real-time cloud sync, and thermal printing.",
-      image: "/mwalimu-pos.png",
+      image: "/mwalimu-pos1.png",
       tags: [
         "Electron",
         "SQLite",
