@@ -19,6 +19,7 @@ export default function LoadingScreen() {
     // Handle actual resource loading
     const handleLoad = () => {
       setProgress(100)
+      // Clear any fallback timeout if load fires
       setTimeout(() => setIsLoading(false), 500)
     }
 
@@ -27,6 +28,12 @@ export default function LoadingScreen() {
     } else {
       window.addEventListener('load', handleLoad)
     }
+
+    // Fallback: if window load takes too long (3.5s), finish loading anyway
+    const fallback = setTimeout(() => {
+      setProgress(100)
+      setTimeout(() => setIsLoading(false), 400)
+    }, 3500)
 
     // Simulate progress until everything is loaded
     const interval = setInterval(() => {
@@ -40,6 +47,7 @@ export default function LoadingScreen() {
 
     return () => {
       clearInterval(interval)
+      clearTimeout(fallback)
       window.removeEventListener('load', handleLoad)
     }
   }, [])
